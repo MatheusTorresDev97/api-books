@@ -13,7 +13,7 @@ const livroSchema = new mongoose.Schema(
       type: Number,
       required: [true, "O preço é obrigatório"],
       enum: {
-        values: ["25", "50", "75"],
+        values: [25, 50, 75],
         message: "A valor {VALUE} não é um valor permitido.",
       },
     },
@@ -33,6 +33,6 @@ const livroSchema = new mongoose.Schema(
   { versionKey: false }
 );
 
-const livro = mongoose.model("livros", livroSchema);
+const livros = mongoose.model("livros", livroSchema);
 
-export default livro;
+export default livros;
